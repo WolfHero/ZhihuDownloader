@@ -11,8 +11,11 @@
 
 对了，不能保存图片，不过 `Ctrl+S`会下载网页的大部分素材，也包括清晰度较低的图片。
 
+本项目仅为技术交流，请勿用于侵权传播知乎内容，知乎回答的版权属于原作者。
+
 #### 需要安装的第三方库
 ```shell
+pip install requests -i https://pypi.douban.com/simple --trusted-host pypi.douban.com
 pip install bs4 -i https://pypi.douban.com/simple --trusted-host pypi.douban.com
 pip install lxml -i https://pypi.douban.com/simple --trusted-host pypi.douban.com
 ```

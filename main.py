@@ -46,7 +46,7 @@ keywords = site.find_all('meta', attrs={'itemprop': "keywords"}, recursive=True,
     'content']
 author = site.find_all('div', attrs={'class': 'AuthorInfo'}, limit=1)[0].find_next('meta', attrs={
     'itemprop': "name"}).__getattribute__('attrs')['content']
-print("问题名：" + title + "\n问题关键词：" + keywords + "\n回答作者名：" + author + "\n回答链接：" + url)
+print("问题名：" + title + "\n问题关键词：" + keywords + "\n回答作者名：" + author + "\n问题链接：" + url)
 print("\n===============正文===============\n")
 text = site.find('div', attrs={'class': "RichContent-inner"})
 for i in text:
@@ -54,7 +54,7 @@ for i in text:
         print(i.text)
 
 with open(title + ".txt", mode="wt+", encoding="utf-8") as f:
-    f.write("问题名：" + title + "\n问题关键词：" + keywords + "\n回答作者名：" + author + "\n回答链接：" + url)
+    f.write("问题名：" + title + "\n问题关键词：" + keywords + "\n回答作者名：" + author + "\n问题链接：" + url)
     f.write("\n===============正文===============\n")
     for i in text:
         if i.text.find('.css') == -1:
