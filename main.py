@@ -6,7 +6,8 @@ try:
 except ModuleNotFoundError:
     print("未安装必要的BeautifulSoup库\n"
           "选择预期的Python后环境输入下面的语句进行安装\n"
-          "pip install bs4 -i https://pypi.douban.com/simple --trusted-host pypi.douban.com")
+          "pip install bs4 -i https://pypi.douban.com/simple --trusted-host pypi.douban.com"
+          "pip install lxml -i https://pypi.douban.com/simple --trusted-host pypi.douban.com")
     exit()
 
 print(" 知乎回答下载器 | 离线收藏你喜爱的")
